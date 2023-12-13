@@ -1,4 +1,3 @@
-// Error handling middleware for multer
 const handleUploadErrors = (err, req, res, next) => {
     if (err instanceof multer.MulterError) {
         res.status(400).json({ error: err.message });
