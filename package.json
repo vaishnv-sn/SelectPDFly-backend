@@ -1,0 +1,27 @@
+{
+    "name": "selectpdfly-backend",
+    "version": "1.0.0",
+    "description": "This backend facilitates the extraction of specific pages from uploaded PDF files in a web application. It handles file uploads, page selection, and PDF extraction functionalities to create customized PDFs based on user-selected pages. Built using Node.js and Express, it provides endpoints for handling file uploads, page selection, and extraction processes.",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node server.js"
+    },
+    "keywords": [
+        "pdfeditor",
+        "nodejs",
+        "expressjs",
+        "backend"
+    ],
+    "author": "vaishnav-sn",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "multer": "^1.4.5-lts.1",
+        "pdf-lib": "^1.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}
