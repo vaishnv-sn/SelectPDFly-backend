@@ -71,7 +71,10 @@ module.exports = {
                     return selectedPage[0]
                 })
             );
-            newPdfDoc.addPage(...copyOfPages);
+
+            copyOfPages.forEach((page) => {
+                newPdfDoc.addPage(page);
+            });
 
             const pdfBytes = await newPdfDoc.save();
 
