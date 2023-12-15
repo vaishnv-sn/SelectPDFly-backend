@@ -29,9 +29,9 @@ module.exports = {
                 return res.status(404).json({ error: 'File not found, try again.' });
             };
 
-            const fileData = await fs.promises.readFile(filePath);
+            const fileData = await fs.promises.readFile(filePath, 'base64');
 
-            return res.status(200).setHeader('Content-Type', 'application/pdf').send(fileData);
+            return res.status(200).json({ fileData });
         } catch (error) {
             console.error('Error:', err);
             res.status(500).json({ error: 'Server Unexpected Error, Please try again later!' });
